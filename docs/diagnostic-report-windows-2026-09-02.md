@@ -31,7 +31,7 @@
 **Severity: Low** — Automatically mitigated.
 
 - **Symptom:** Warning in the logs: the SQLite library linked into the venv's Python is affected by the WAL-reset corruption bug.
-- **Root Cause:** The installer-bundled Python runtime ships SQLite 3.45.1. Hermes already mitigates this by enforcing `journal_mode=DELETE` (rollback journal) on its databases, so no corruption occurs — but the runtime remediation step of `hermes update` did not complete (see #7).
+- **Root Cause:** The installer-bundled Python runtime ships SQLite 3.45.1. Hermes already mitigates this by enforcing `journal_mode=DELETE` (rollback journal) on its databases, so no corruption occurs — but the runtime remediation step of `hermes update` did not complete (see item 7).
 
 ### 5. `terminal.backend` spontaneously changed to `ssh`
 **Severity: Medium.**
